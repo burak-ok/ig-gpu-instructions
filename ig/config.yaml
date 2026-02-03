@@ -7,3 +7,9 @@ operator:
         # pyroscope
         endpoint: "127.0.0.1:4040"
         insecure: true
+      my-metrics-exporter-cumulative:
+        exporter: otlp-grpc
+        endpoint: "otel-collector:4317"
+        insecure: true
+        temporality: cumulative
+        interval: 5s
