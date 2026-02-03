@@ -7,6 +7,8 @@ operator:
         # pyroscope
         endpoint: "127.0.0.1:4040"
         insecure: true
+  otel-metrics:
+    exporters:
       my-metrics-exporter-cumulative:
         exporter: otlp-grpc
         endpoint: "127.0.0.1:4317"
