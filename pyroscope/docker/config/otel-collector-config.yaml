@@ -12,7 +12,7 @@ processors:
 exporters:
   debug:
     verbosity: detailed
-  otlp:
+  otlp/pyroscope:
     endpoint: "http://pyroscope:4040"
     tls:
       insecure: true
@@ -40,7 +40,7 @@ service:
       exporters: [debug]
     profiles:
       receivers: [otlp]
-      exporters: [otlp]
+      exporters: [otlp/pyroscope]
 
   telemetry:
     logs:
